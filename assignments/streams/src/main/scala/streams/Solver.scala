@@ -78,7 +78,7 @@ trait Solver extends GameDef {
         state <- initial
         next <- newNeighborsOnly(neighborsWithHistory(state._1, state._2), explored)
       } yield next
-      more #::: from(more, explored ++ more.map(_._1))
+      more #::: from(more, explored ++ more.mapgit add(_._1))
     }
   }
 
